@@ -20,15 +20,15 @@ iOS和WatchOS必须要实现会话代理方法，请实现 ```session:activation
 让会话知道app支持多个手表通讯。在手机应用中，实现 ```sessionDidBecomeInactive:```和```sessionDidDeactivate:```
 会话代理方法，去管理不同的手表应用状态。
 
-![](/Users/yiming/Desktop/1.jpg)
+![](https://github.com/lyimin/iPhone-Apple-Watch-/blob/master/1.jpg)
 
 
-![](/Users/yiming/Desktop/2.jpg)
+![](https://github.com/lyimin/iPhone-Apple-Watch-/blob/master/2.jpg)
 
 当iPhone换一个新的Apple Watch配对且自动配对成功时，一个iPhone只能和一个Apple Watch进行通讯，Apple Watch会话是处于活跃状态，但是iPhone将从不太活跃转换成不活跃状态，在这两个状态的短暂时间里，可以传递已经收到的数据，当数据被传递，会话状态是不活跃的，在这个时间时，iPhone一定要再次调用**activateSession**
 一次去和新的Apple Watch进行连接
 
-![](/Users/yiming/Desktop/3.png)
+![](https://github.com/lyimin/iPhone-Apple-Watch-/blob/master/3.png)
 
 ### 与相应的应用通讯
 当Apple Watch和iPhone的**WCSession**的**activationState**属性被置成
@@ -52,4 +52,4 @@ iOS和WatchOS必须要实现会话代理方法，请实现 ```session:activation
 
 - 如果设备内存不足时，会导致传送数据失败，如果数据的全面或者通讯出现错误。检查错误并提供合理的解决办法。
 
-![](/Users/yiming/Desktop/4.jpg)
+![](https://github.com/lyimin/iPhone-Apple-Watch-/blob/master/4.jpg)
